@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block body %}
+<h1>Accueil</h1>
+
+<p title="message">
+{% if g.user %}
+Vous etes authentifie
+{% else %}
+Acces anonyme
+{% endif %}
+</p>
+{% endblock %}

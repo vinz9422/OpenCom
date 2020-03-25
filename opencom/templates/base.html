@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<style>
+    body{
+    background-color: white;
+    }
+    header{
+    background-color: #8097b3;
+    }
+</style>
+</head>
+<body>
+<header>
+    <h1>OpenCom</h1>
+    {% block header %}
+    {% endblock %}
+    {% if g.user %}
+    <p>Bonjour {{ g.user.username }}</p>
+    <a href="{{ url_for('auth.logout') }}">Se d&eacute;connecter</a>
+    {% else %}
+    <a href="{{ url_for('auth.login') }}">Login</a>
+    {% endif %}
+</header>
+<nav>
+    {% block nav %}
+    {% endblock %}
+</nav>
+{% block body %}
+{% endblock %}
+</body>
+</html>

@@ -1,6 +1,14 @@
 DROP TABLE IF EXISTS compte;
+DROP TABLE IF EXISTS user;
+
+CREATE TABLE users (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    username TEXT,
+    pwd TEXT
+);
 
 CREATE TABLE compte (
     id INTEGER PRIMARY KEY,
     libelle TEXT
+
 );
